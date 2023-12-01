@@ -137,11 +137,11 @@ After implementing the requested methods, analyze the following aspects and prov
 <table align="center">
   <tr>
     <td align="center">
-      <img src="images/policy.png" alt="vis1" width="500">
+      <img src="images/policy.png" alt="vis1" width="375">
       <br>
     </td>
     <td align="center">
-      <img src="images/statevalue.png" alt="vis1" width="500">
+      <img src="images/statevalue.png" alt="vis1" width="375">
       <br>
     </td>
     </tr>
