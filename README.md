@@ -133,3 +133,18 @@ After implementing the requested methods, analyze the following aspects and prov
 - Discuss the differences compared to the first-visit algorithm.
 
 
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/policy.png" alt="vis1" width="500">
+      <br>
+    </td>
+    </tr>
+  <tr>
+    <td align="center">
+      <img src="images/statevalue.png" alt="vis1" width="500">
+      <br>
+    </td>
+    </tr>
+</table
