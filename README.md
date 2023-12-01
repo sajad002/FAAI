@@ -11,7 +11,7 @@ Using the OpenAI Gym library in the Frozen Lake environment, we investigate and 
 
 The environment consists of navigating through a frozen lake from Start (S) to Goal (G) without falling into any Hole (H) by walking on the Frozen (F) lake. If the agent falls into a hole (H), it must start the traversal again from the starting cell (S). Due to the slippery nature of the frozen lake, the agent may not always move in the intended direction. The agent can move in four directions: left, down, right, and up. If the agent makes a move that crosses the environment boundary, the agent's position does not change. The rewards for reaching each of the states S, G, and F are specified based on the problem under consideration.
 
-For more details, you can refer to the <p><a href="https://www.gymlibrary.dev/environments/toy_text/frozen_lake/"> -  official documentation. </a></p>
+For more details, you can refer to the <a href="https://www.gymlibrary.dev/environments/toy_text/frozen_lake/"> -  official documentation. </a>
 
 ## Section 1 – Implementation of Algorithms
 
