@@ -28,7 +28,7 @@ For more details, you can refer to the <a href="https://www.gymlibrary.dev/envir
 To execute the project, start by installing the Gym library. The implemented code is based on Gym version 0.26.2, but you can use other versions of the Gym library or Gymnasium if needed. Note that if you use a different version, you may need to modify specific parts of the implemented code.
 
 Download the code provided in the repository and add it to your project. As you can see, all the necessary methods for interacting with the Gym library, policy display methods, etc., have already been implemented. You can use these methods to carry out your project.
-
+### 1. Policy Iteration
 The initial algorithm to implement is Policy Iteration. This algorithm, with a complete view of the environment, starts with a random policy and iteratively reaches the optimal policy. The algorithm has two main steps: Policy Evaluation and Policy Improvement.
 
 - In the first part of this algorithm, using the Bellman equation and the specified policy, it calculates the value of each state.
@@ -67,7 +67,7 @@ def policy_iteration(env, custom_map, max_ittr=30, theta=0.01, discount_factor=0
     return V, policy
 ```
 
-The second algorithm to implement is First-Visit Monte Carlo Prediction. The value of a state is equal to the estimated expected return starting from that state. One clear way to estimate the value of a state from experience is to simply average the observed returns after visiting that state. The algorithm collects and calculates the average return obtained from experience following a specified policy after completing an episode and reaching a terminal state. Note that this algorithm estimates the value of a state only the first time it reaches that state during an episode and does not make any changes to the value if it observes the state again.
+2. The second algorithm to implement is First-Visit Monte Carlo Prediction. The value of a state is equal to the estimated expected return starting from that state. One clear way to estimate the value of a state from experience is to simply average the observed returns after visiting that state. The algorithm collects and calculates the average return obtained from experience following a specified policy after completing an episode and reaching a terminal state. Note that this algorithm estimates the value of a state only the first time it reaches that state during an episode and does not make any changes to the value if it observes the state again.
 
 <table align="center">
   <tr>
