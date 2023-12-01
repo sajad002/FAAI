@@ -26,6 +26,25 @@ In the first part of this algorithm, using the Bellman equation and the specifie
 In the second part, by selecting an action that maximizes the value of that state, it strives to improve its policy. The pseudocode is as follows:
 
 ```python
-# Implement the Policy Iteration algorithm
-# def policy_iteration(environment):
-#     ...
+# Implement policy iteration using the Policy Evaluation and Policy Improvement steps. In the Policy Evaluation step, you compute
+# the state values for each state in the environment using the Bellman equation and the current policy. In the Policy Improvement
+# step, you improve the policy by choosing the action that maximizes the value function for each state.
+def policy_iteration(env, custom_map, max_ittr=30, theta=0.01, discount_factor=0.9):
+    policy = get_init_policy(custom_map)   # it gives a random-walk policy
+    V = np.zeros(env.observation_space.n)  # you can change it with any init value
+    P = env.P                              # This attribute stores the transition probabilities
+                                           # and rewards for each possible action in each possible
+                                           # state of the environment.
+
+    # loop till policy_stable becomes True or itter >= max_ittr
+    ittr = 0
+    policy_stable = False
+    while not policy_stable and ittr < max_ittr:
+        # policy evaluation
+
+        # policy improvement
+
+        ittr += 1
+    return V, policy
+```
+ssda
