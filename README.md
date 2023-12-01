@@ -22,6 +22,7 @@ For more details, you can refer to the <a href="https://www.gymlibrary.dev/envir
     </tr>
 </table>
 
+
 ## Section 1 – Implementation of Algorithms
 
 To execute the project, start by installing the Gym library. The implemented code is based on Gym version 0.26.2, but you can use other versions of the Gym library or Gymnasium if needed. Note that if you use a different version, you may need to modify specific parts of the implemented code.
