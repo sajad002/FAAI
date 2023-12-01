@@ -76,7 +76,7 @@ The second algorithm to implement is First-Visit Monte Carlo Prediction. The val
       <br>
     </td>
     </tr>
-</table
+</table>
 
 ```python
 # This algorithm allows you to estimate the state values of a given policy by sampling episodes and
