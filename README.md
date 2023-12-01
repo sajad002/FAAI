@@ -16,7 +16,7 @@ For more details, you can refer to the <a href="https://www.gymlibrary.dev/envir
 <table align="center">
   <tr>
     <td align="center">
-      <img src="images/frozenlake.png" alt="vis1" width="700">
+      <img src="images/frozenlake.png" alt="vis1" width="500">
       <br>
     </td>
     </tr>
@@ -30,9 +30,18 @@ Download the code provided in the repository and add it to your project. As you 
 
 The initial algorithm to implement is Policy Iteration. This algorithm, with a complete view of the environment, starts with a random policy and iteratively reaches the optimal policy. The algorithm has two main steps: Policy Evaluation and Policy Improvement.
 
-In the first part of this algorithm, using the Bellman equation and the specified policy, it calculates the value of each state.
+- In the first part of this algorithm, using the Bellman equation and the specified policy, it calculates the value of each state.
 
-In the second part, by selecting an action that maximizes the value of that state, it strives to improve its policy. The pseudocode is as follows:
+- In the second part, by selecting an action that maximizes the value of that state, it strives to improve its policy. The pseudocode is as follows:
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/sod-PI.png" alt="vis1" width="500">
+      <br>
+    </td>
+    </tr>
+</table>
 
 ```python
 # Implement policy iteration using the Policy Evaluation and Policy Improvement steps. In the Policy Evaluation step, you compute
@@ -56,4 +65,71 @@ def policy_iteration(env, custom_map, max_ittr=30, theta=0.01, discount_factor=0
         ittr += 1
     return V, policy
 ```
-ssda
+
+The second algorithm to implement is First-Visit Monte Carlo Prediction. The value of a state is equal to the estimated expected return starting from that state. One clear way to estimate the value of a state from experience is to simply average the observed returns after visiting that state. The algorithm collects and calculates the average return obtained from experience following a specified policy after completing an episode and reaching a terminal state. Note that this algorithm estimates the value of a state only the first time it reaches that state during an episode and does not make any changes to the value if it observes the state again.
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/sod-FVMCP.png" alt="vis1" width="500">
+      <br>
+    </td>
+    </tr>
+</table
+
+```python
+# This algorithm allows you to estimate the state values of a given policy by sampling episodes and
+# calculating the average returns(in first visit of a state in each episode)
+def first_visit_mc_prediction(env, policy, num_episodes, gamma):
+    # initilize
+    V = np.zeros(env.observation_space.n)
+    N = np.zeros(env.observation_space.n)
+
+    # loop in range num_episodes(for each episode)
+    # for i_episode in range(num_episodes):
+
+    # generate episode w.r.t policy
+
+    # loop for each step of episode , t= T-1, T-2, ..., 0
+
+    return V
+```
+
+The third algorithm to implement is Every-Visit Monte Carlo Prediction. This algorithm is similar to the first-visit algorithm, with the difference that it considers all instances of encountering a state, not just the first time.
+
+```python
+# This algorithm allows you to estimate the state values of a given policy by sampling episodes and
+# calculating the average returns(in every visit of a state)
+def every_visit_mc_prediction(env, policy, num_episodes, gamma):
+    # initilize
+    V = np.zeros(env.observation_space.n)
+    N = np.zeros(env.observation_space.n)
+
+    # loop in range num_episodes(for each episode)
+    # for i_episode in range(num_episodes):
+
+    # generate episode w.r.t policy
+
+    # loop for each step of episode , t= T-1, T-2, ..., 0
+
+    return V
+```
+## Section 2 – Evaluation and Analysis of Algorithms
+After implementing the requested methods, analyze the following aspects and provide reasoning for the obtained results in each section. Report them appropriately.
+
+1. Policy Iteration:
+
+- Describe the approach and results.
+- Discuss any observed patterns or challenges.
+
+2. First-Visit Monte Carlo Prediction:
+
+- Explain the methodology and outcomes.
+- Discuss the impact of considering only the first visit to a state.
+
+3. Every-Visit Monte Carlo Prediction:
+
+- Present the approach and findings.
+- Discuss the differences compared to the first-visit algorithm.
+
+
