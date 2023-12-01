@@ -13,6 +13,15 @@ The environment consists of navigating through a frozen lake from Start (S) to G
 
 For more details, you can refer to the <a href="https://www.gymlibrary.dev/environments/toy_text/frozen_lake/"> -  official documentation. </a>
 
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/frozenlake.png" alt="vis1" width="700">
+      <br>
+    </td>
+    </tr>
+</table>
+
 ## Section 1 – Implementation of Algorithms
 
 To execute the project, start by installing the Gym library. The implemented code is based on Gym version 0.26.2, but you can use other versions of the Gym library or Gymnasium if needed. Note that if you use a different version, you may need to modify specific parts of the implemented code.
