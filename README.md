@@ -66,8 +66,8 @@ def policy_iteration(env, custom_map, max_ittr=30, theta=0.01, discount_factor=0
         ittr += 1
     return V, policy
 ```
-
-2. The second algorithm to implement is First-Visit Monte Carlo Prediction. The value of a state is equal to the estimated expected return starting from that state. One clear way to estimate the value of a state from experience is to simply average the observed returns after visiting that state. The algorithm collects and calculates the average return obtained from experience following a specified policy after completing an episode and reaching a terminal state. Note that this algorithm estimates the value of a state only the first time it reaches that state during an episode and does not make any changes to the value if it observes the state again.
+### 2.  First-Visit Monte Carlo Prediction
+The second algorithm to implement is First-Visit Monte Carlo Prediction. The value of a state is equal to the estimated expected return starting from that state. One clear way to estimate the value of a state from experience is to simply average the observed returns after visiting that state. The algorithm collects and calculates the average return obtained from experience following a specified policy after completing an episode and reaching a terminal state. Note that this algorithm estimates the value of a state only the first time it reaches that state during an episode and does not make any changes to the value if it observes the state again.
 
 <table align="center">
   <tr>
@@ -96,6 +96,7 @@ def first_visit_mc_prediction(env, policy, num_episodes, gamma):
     return V
 ```
 
+### 3. Every-Visit Monte Carlo Prediction
 The third algorithm to implement is Every-Visit Monte Carlo Prediction. This algorithm is similar to the first-visit algorithm, with the difference that it considers all instances of encountering a state, not just the first time.
 
 ```python
